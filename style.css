@@ -7,6 +7,8 @@
 :root {
     --color-white: #FFF;
     --color-black: #000;
+    --color-orange:#F09046;
+    --color-green: #48C079;
     --color-light-gray:#555;
     --color-black-gray: #403A3A;
     --color-black-beige: #dbd5C9;
@@ -27,6 +29,9 @@ body {
 .display {
     width: 500px;
     height: 320px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--color-light-gray);
     background: linear-gradient(to right, #E8E8E8, #C1C1C1);
 }
 
@@ -37,6 +42,7 @@ body {
 
 .line-keyboard{
     display: flex;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -52,4 +58,44 @@ body {
     color: var(--color-white);
     background-color: var(--color-black);
     box-shadow:3px 3px 0 var(--color-light-gray);
+}
+
+.bottom--white{
+    font-size: 15px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+.bottom--correcting{
+    font-size: 15px;
+    color: var(--color-black);
+    background-color:var(--color-orange);
+}
+
+.bottom--confirm{
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    color: var(--color-black);
+    background-color: var(--color-green);
+}
+
+.d-1{
+    flex: 1;
+    display: flex;
+}
+
+.d-1-left{
+    flex: 1;
+}
+
+.d-1-right{
+    width: 90px;
+}
+
+.d-2{
+    height: 50px;
+    font-size: 14px;
+    padding-left: 10px;
+    border-top: 2px solid var(--color-black);
 }
