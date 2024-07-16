@@ -4,7 +4,7 @@ let steps = [
         number: 5,
         candidates: [
             {
-                number: 38111,
+                number: '38111',
                 name: 'Hilda de Polares',
                 party: 'ODN',
                 picture: [
@@ -12,7 +12,7 @@ let steps = [
                 ]
             },
             {
-                number: 77222,
+                number: '77222',
                 name: 'Siegfried de Doube',
                 party: 'ODN',
                 picture: [
@@ -26,7 +26,7 @@ let steps = [
         number: 2,
         candidates: [
             {
-                number: 99,
+                number: '99',
                 name: 'Saori',
                 party: 'ATN',
                 vice: 'Shion',
@@ -36,7 +36,7 @@ let steps = [
                 ]
             },
             {
-                number: 88,
+                number: '88',
                 name: 'Hades',
                 party: 'IPI',
                 vice: 'Radamanthys',
