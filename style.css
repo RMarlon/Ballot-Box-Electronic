@@ -174,3 +174,8 @@ body {
     padding-left: 10px;
     border-top: 2px solid var(--color-black);
 }
+
+.big--side{
+    font-size: 40px;
+    font-weight: bold;
+}

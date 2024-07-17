@@ -30,7 +30,34 @@ function startSteps() {
 }
 
 function actualizeInterface() {
-    alert('Finalized of digict the vote');
+    let step = steps[actualSteps];
+    let candidate = step.candidates.filter((item)=>{
+        if(item.number === num){
+            return true;
+        }
+        else{
+            return false;
+        }
+    });
+    if(candidate.length > 0){
+        candidate = candidate[0];
+
+        yourVoteFor.style.display = 'block';
+        notice.style.display = 'block';
+        description.innerHTML = `Name: ${candidate.name}<br/> Party: ${candidate.party}`;
+
+        let pictureHtml = '';
+        for(let i in candidate.picture){
+            pictureHtml += `<div class="d-1-image"> <img src="/images/${candidate.picture[i].url}" alt="">${candidate.picture[i].legend}</div>`;
+
+        }
+        side.innerHTML = pictureHtml;
+    }
+    else{
+        yourVoteFor.style.display = 'block';
+        notice.style.display = 'block';
+        description.innerHTML ='<div class="big--side flashes">Vote Null</div>';
+    }
 }
 
 function cliked(n) {
