@@ -179,3 +179,12 @@ body {
     font-size: 40px;
     font-weight: bold;
 }
+
+.giant--side{
+    flex: 1;
+    display: flex;
+    font-size: 70px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}

@@ -8,6 +8,7 @@ let numbers = document.querySelector('.d-1-3');
 let actualSteps = 0;
 let num = '';
 let white = false;
+let vote = [];
 
 function startSteps() {
     let step = steps[actualSteps];
@@ -102,11 +103,17 @@ function confirmOK() {
 
     if(white === true){
         confirmationVote = true;
-        console.log('Confirming with white...');
+        vote.push({
+            step: steps[actualSteps].title,
+            vote: 'white'
+        });
     }
     else if(num.length === step.number){
         confirmationVote = true;
-        console.log('Confirming with ' + num)
+        vote.push({
+            step: steps[actualSteps].title,
+            vote: num
+        });
     }
     
     if(confirmationVote){
@@ -115,7 +122,8 @@ function confirmOK() {
             startSteps();
         }
         else{
-            console.log('FIM');
+            document.querySelector('.display').innerHTML = '<div class="giant--side flashes">FIM</div>';
+            console.log(vote);
         }
     }
 }
